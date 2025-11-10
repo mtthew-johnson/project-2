@@ -23,7 +23,7 @@ void mkdir(char pathName[]){
     struct NODE* scan = parent->childPtr;
     while (scan) {
         if (strcmp(scan->name, baseName) == 0) {
-            printf("MKDIR ERROR: directory %s already exists\n", baseName);
+            printf("MKDIR ERROR: directory %s already exists\n", pathName);
             return;
         }
         scan = scan->siblingPtr;
@@ -94,7 +94,7 @@ struct NODE* splitPath(char* pathName, char* baseName, char* dirName){
             }
         }
         if (child == NULL) {
-            printf("MKDIR SUCCESS: node %s created\n", pathName);
+            printf("ERROR: directory %s does not exist\n", currentDirectory);
             return NULL;
         }
         current = child;                    
