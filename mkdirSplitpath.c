@@ -94,7 +94,7 @@ struct NODE* splitPath(char* pathName, char* baseName, char* dirName){
             }
         }
         if (child == NULL) {
-            printf("ERROR: directory %s does not exist\n", currentDirectory);
+            printf("MKDIR SUCCESS: node %s created\n", pathName);
             return NULL;
         }
         current = child;                    
